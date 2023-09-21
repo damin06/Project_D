@@ -1,0 +1,119 @@
+# Blender 3.3.1 MTL File: 'AE86.blend'
+# www.blender.org
+
+newmtl Body
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Body_Diffuse.png
+map_Ns Body_Roughness.png
+
+newmtl Body_Paint
+Ka 0.100000 0.100000 0.100000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd Body_Paint_Diffuse.png
+map_Ns Body_Paint_Roughness.png
+
+newmtl Details
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Details_Diffuse.png
+map_Ns Details_Roughness.png
+map_refl Details_Metallic.png
+
+newmtl Drivetrain
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Drivetrain_Diffuse.png
+map_Ns Drivetrain_Roughness.png
+map_refl Drivetrain_Metallic.png
+
+newmtl Engine
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Engine_Diffuse.png
+map_Ns Engine_Roughness.png
+map_refl Engine_Metallic.png
+
+newmtl Interior
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Interior_Diffuse.png
+map_Ns Interior_Roughness.png
+map_refl Interior_Metallic.png
+map_Ke Interior_Emission.png
+
+newmtl Interior_Body
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Interior_Body_Diffuse.png
+map_Ns Interior_Body_Roughness.png
+map_refl Interior_Body_Metallic.png
+
+newmtl Lights
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Lights_Diffuse.png
+map_Ns Lights_Roughness.png
+map_refl Lights_Metallic.png
+map_Ke Lights_Emission.png
+
+newmtl Seats_Floor
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Seats_Floor_Diffuse.png
+map_Ns Seats_Floor_Roughness.png
+
+newmtl Wheels
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Wheels_Diffuse.png
+map_Ns Wheels_Roughness.png
+map_refl Wheels_Metallic.png
+
+newmtl Windows
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd Windows_Diffuse.png
+map_Ns Windows_Roughness.png
+map_d Windows_Alpha.png
