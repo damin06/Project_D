@@ -29,23 +29,28 @@ public class InputSystem : ScriptableObject, ICarActions
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 value = context.ReadValue<Vector2>();
-        _movementEvent?.Invoke(value);
+        _movementEvent.Invoke(value);
     }
 
     public void OnLight(InputAction.CallbackContext context)
     {
-        _lightEvent?.Invoke();
+        _lightEvent.Invoke();
     }
 
     public void OnBlink(InputAction.CallbackContext context)
     {
         Vector2 value = context.ReadValue<Vector2>();
-        _blinkEvent?.Invoke(value);
+        _blinkEvent.Invoke(value);
     }
 
     public void OnGear(InputAction.CallbackContext context)
     {
         Vector2 value = context.ReadValue<Vector2>();
-        _gearChangeEvent?.Invoke(value);
+        _gearChangeEvent.Invoke(value);
+    }
+
+    public void OnNewaction(InputAction.CallbackContext context)
+    {
+        throw new NotImplementedException();
     }
 }
