@@ -16,7 +16,7 @@ public class InputSystem : ScriptableObject, ICarActions
     private CarInput _carInput;
 
 
-    private void Awake()
+    private void OnEnable()
     {
         if(_carInput == null)
         {
@@ -28,6 +28,7 @@ public class InputSystem : ScriptableObject, ICarActions
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        Debug.Log("move");
         Vector2 value = context.ReadValue<Vector2>();
         _movementEvent.Invoke(value);
     }
@@ -47,10 +48,5 @@ public class InputSystem : ScriptableObject, ICarActions
     {
         Vector2 value = context.ReadValue<Vector2>();
         _gearChangeEvent.Invoke(value);
-    }
-
-    public void OnNewaction(InputAction.CallbackContext context)
-    {
-        throw new NotImplementedException();
     }
 }

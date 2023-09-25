@@ -12,6 +12,8 @@ struct wheels
     public Transform _wheelTrans;
 }
 
+[RequireComponent(typeof(Rigidbody))]
+
 public class CarController : MonoBehaviour
 {
     [SerializeField] private float motorPower;
@@ -20,9 +22,11 @@ public class CarController : MonoBehaviour
     [SerializeField] private InputSystem _input;
     [SerializeField] private wheels[] _wheels;
 
-    private float speed;
     private float gasInput;
     private float steeringInput;
+    private float speed => _rb.velocity.magnitude;
+    private float slipAngle;
+
     private Rigidbody _rb;
 
     private void Awake()
@@ -37,6 +41,7 @@ public class CarController : MonoBehaviour
     {
         Steering();
         Motor();
+        Brake();
 
         //ÈÙ ¿òÁ÷ÀÓ
         foreach (wheels wheel in _wheels)
@@ -45,12 +50,19 @@ public class CarController : MonoBehaviour
         }
     }
 
+    private void Brake()
+    {
+        //slipAngle = Vector3.SignedAngle(transform.forward)
+    }
+
     private void Steering()
     {
+        //float percent = Vector3.Lerp()
         float steeringAngle = steeringInput * steeringCurve.Evaluate(speed);
+        Debug.Log(steeringAngle);
         foreach (wheels wheel in _wheels)
         {
-            if (wheel._wheelPos == WheelPos.Rear) continue;
+            if (wheel._wheelPos == WheelPos.Front)
             wheel._wheelcol.steerAngle = steeringAngle;
         }
     }
@@ -59,14 +71,13 @@ public class CarController : MonoBehaviour
     {
         foreach(wheels wheel in _wheels)
         {
-            if (wheel._wheelPos == WheelPos.Rear) continue;
+            if (wheel._wheelPos == WheelPos.Rear)
             wheel._wheelcol.motorTorque = motorPower * gasInput;
         }
     }
 
     public void SetInput(Vector2 value)
     {
-        Debug.Log("µÊ");
         gasInput = value.y;
         steeringInput = value.x;
     }
